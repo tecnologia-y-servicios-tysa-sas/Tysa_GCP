@@ -1,0 +1,82 @@
+﻿@model GCP_CF.Models.ActividadesFases
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ActividadesFases</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadosActividad.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadosActividad.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FasesContrato.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FasesContrato.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contratos_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contratos_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripción)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripción)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiasHabiles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiasHabiles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Actividad_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

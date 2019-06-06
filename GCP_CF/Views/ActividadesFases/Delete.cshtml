@@ -1,0 +1,88 @@
+﻿@model GCP_CF.Models.ActividadesFases
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ActividadesFases</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadosActividad.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadosActividad.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FasesContrato.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FasesContrato.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contratos_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contratos_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripción)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripción)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiasHabiles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiasHabiles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
