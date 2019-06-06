@@ -8,19 +8,22 @@ namespace GCP_CF.Models
         [Key]
         public int Contrato_Id { get; set; }
 
+        [Display(Name = "Numero de Contrato")]
+        public string NumeroContrato { get; set; }
+
         [Display(Name = "Fecha de Inicio")]
         public DateTime FechaInicio { get; set; }
 
         [Display(Name = "Seleccione Contrato")]
         public Nullable<int> TipoContrato_Id { get; set; }
 
-        [Display(Name = "Cliente")]
+        [Display(Name = "Entidad Contratante")]
         public int Persona_Id { get; set; }
 
         [Display(Name = "Objeto Contractual")]
         public string ObjetoContractual { get; set; }
 
-        public DateTime Plazo { get; set; }
+        public int Plazo { get; set; }
 
         [Display(Name = "Fecha de Terminacion")]
         public DateTime FechaTerminacion { get; set; }
