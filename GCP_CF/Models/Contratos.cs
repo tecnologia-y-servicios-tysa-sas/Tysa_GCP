@@ -50,11 +50,14 @@ namespace GCP_CF.Models
         public int Year { get; set; }
 
         [Display(Name = "Valor Contrato")]
+        [DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal ValorContrato { get; set; }
 
         [Display(Name = "Valor Administrar")]
+        [DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal ValorAdministrar { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:N0}")]
         public decimal Honorarios { get; set; }
 
         public int Ejecucion { get; set; }

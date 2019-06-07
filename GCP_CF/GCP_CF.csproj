@@ -55,6 +55,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -159,6 +161,66 @@
     <Compile Include="Models\TiposNaturaleza.cs" />
     <Compile Include="Models\TiposPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schema\ActividadesFases.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\Contratos.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\ContratosMarcoes.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\C__MigrationHistory.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\C__MigrationHistory1.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EstadosActividads.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\FasesContratoes.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\GCP.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCP.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\GCP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\GCP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCP.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\Personas.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\sp_helpdiagrams_Result.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\sysdiagrams.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TiposContratos.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TiposEstadoContratoes.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TiposNaturalezas.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TiposPersonas.cs">
+      <DependentUpon>GCP.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -173,10 +235,28 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Schema\GCP.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GCP.edmx</DependentUpon>
+      <LastGenOutput>GCP.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Schema\GCP.edmx.sql" />
+    <Content Include="Schema\GCP.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GCP.edmx</DependentUpon>
+      <LastGenOutput>GCP.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Schema\GCP.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GCP.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Schema\GCP.edmx.diagram">
+      <DependentUpon>GCP.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -293,6 +373,9 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\Nueva carpeta\jquery-3.3.1.min.map" />
     <Content Include="Scripts\Nueva carpeta\jquery-3.3.1.slim.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

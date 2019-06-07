@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th class="head-table">
+            Número Contrato
+        </th>
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.FechaInicio)
         </th>
         <th class="head-table">
@@ -20,65 +23,68 @@
         <th class="head-table">
             @Html.DisplayNameFor(model => model.Persona_Id)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.ObjetoContractual)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.Plazo)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.FechaTerminacion)
         </th>
-         <th class="head-table">
-           Abogado
+        <th class="head-table">
+            Abogado
         </th>
-         <th class="head-table">
+        <th class="head-table">
             Supervisor
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.Crp)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.Cdp)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.FechaActaInicio)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.TipoEstadoContrato_Id)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.Year)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.ValorContrato)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.ValorAdministrar)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.Honorarios)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.Ejecucion)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.PorcentajeFacturado)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             @Html.DisplayNameFor(model => model.PorcentajeFacturadoHonorarios)
         </th>
-         <th class="head-table">
+        <th class="head-table">
             Supervisor Técnico
         </th>
-         <th class="head-table">
-           Contrato Marco
+        <th class="head-table">
+            Contrato Marco
         </th>
-         <th class="head-table"></th>
+        <th class="head-table"></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td class="border-cell">
+            @Html.DisplayFor(modelItem => item.NumeroContrato)
+        </td>
         <td class="border-cell">
             @Html.DisplayFor(modelItem => item.FechaInicio)
         </td>
@@ -143,9 +149,9 @@
             @Html.DisplayFor(modelItem => item.ContratoMarco_Id)
         </td>
         <td class="border-cell">
-            @Html.ActionLink("Editar", "Edit", new { id=item.Contrato_Id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Contrato_Id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.Contrato_Id })
+            @Html.ActionLink("Editar", "Edit", new { id = item.Contrato_Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.Contrato_Id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.Contrato_Id })
         </td>
     </tr>
 }
